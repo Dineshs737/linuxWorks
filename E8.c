@@ -1,5 +1,7 @@
 #include<stdio.h>
+#include<math.h>
 
+double power();
 // double cal(int);
 int main()
 {
@@ -20,9 +22,37 @@ int main()
     scanf("%d",&user_num);
     printf("---------------------------------------\n");
 
+
+    switch(user_num)
+    {
+        case 1: power(); break;
+
+        // case 2: SquareRoot(); break;
+
+        // case 3: Exponential(); break;
+
+        // case 4: Log();break;
+
+        // case 5: Round(); break; 
+    }
+
     // cal(user_num);
 
 
     return 0;
+}  
+double power()
+{
+    double  base,Exponent;
+
+    printf("Enter base :");
+    scanf("%lf",&base);
+
+    printf("Enter Exponent :");
+    scanf("%lf",&Exponent);
+
+    double result =pow(base,Exponent);
+
+
 }
 
