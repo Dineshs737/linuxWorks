@@ -1,11 +1,16 @@
 #include<stdio.h>
 #include<math.h>
+#include<stdbool.h>
 
 double power();
 // double cal(int);
 int main()
 {
     int user_num;
+    char yORn ='y';
+
+    while(yORn=='y' || yORn=='Y')
+    {
     printf("----------------------------------------------\n");
 
     printf("Scientific Calculator\n");
@@ -25,7 +30,7 @@ int main()
 
     switch(user_num)
     {
-        case 1: power(); break;
+        case 1: printf("The result is:%.2lf",power());  break;
 
         // case 2: SquareRoot(); break;
 
@@ -35,6 +40,13 @@ int main()
 
         // case 5: Round(); break; 
     }
+
+    printf("Do you want to continue? Y/N :");
+    scanf("%lf",&yORn);
+   
+
+    }
+
 
     // cal(user_num);
 
@@ -51,7 +63,7 @@ double power()
     printf("Enter Exponent :");
     scanf("%lf",&Exponent);
 
-    double result =pow(base,Exponent);
+   return pow(base,Exponent); 
 
 
 }
