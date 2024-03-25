@@ -13,7 +13,7 @@ int main()
     int user_num;
     char Yes_or_No ='y';
 
-    while(true)
+    while(Yes_or_No=='y')
     {
     printf("----------------------------------------------\n");
 
@@ -50,7 +50,12 @@ int main()
     printf("\n\n\n---------------------------------------\n");
 
     printf("\nDo you want to continue? Y/N :");
-    scanf("%lf",&Yes_or_No);
+    scanf("%c",&Yes_or_No);
+    scanf("%c",&Yes_or_No);
+
+    if(Yes_or_No =='y' ||Yes_or_No =='Y')  Yes_or_No='y';
+
+    else  break;
 
 
 
